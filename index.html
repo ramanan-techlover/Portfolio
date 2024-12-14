@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+      /* Media Queries for Responsiveness */
+      @media (min-width: 1024px) {
+          #skillsContainer > div {
+              flex: 1 1 calc(20% - 15px); /* 5 items per row */
+          }
+      }
+  
+      @media (max-width: 1023px) and (min-width: 768px) {
+          #skillsContainer > div {
+              flex: 1 1 calc(33.33% - 15px); /* 3 items per row for tablets */
+          }
+      }
+  
+      @media (max-width: 767px) {
+          #skillsContainer > div {
+              flex: 1 1 calc(50% - 15px); /* 2 items per row for smaller screens */
+          }
+      }
+  
+      @media (max-width: 480px) {
+          #skillsContainer > div {
+              flex: 1 1 100%; /* 1 item per row for very small screens */
+          }
+      }
+  </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>Portfolio | Ramanan R</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fas fa-code"></i> Ramanan R</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There,<br/> I'm Ramanan <span>R</span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ramanan-r-techlover/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/ramanan-techlover" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/jigarsable.dev"><i class="fab fa-instagram" target="_blank"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Ramanan</h3>
+        <span class="tag">AI Developer</span>
+        
+        <p>I am an AI Developer based in Coimbatore, Tamil Nadu, currently pursuing my B.Tech in Artificial Intelligence and Data Science at Karpagam College of Engineering.
+          <p>I am passionate about coding, problem-solving, and creating innovative solutions that make a difference.</p>
+          
+          <p>My work focuses on leveraging AI and Machine Learning to solve real-world problems, with expertise in NLP, Deep Learning, and Computer Vision.</p>
+          <p>I am continually working to enhance my skills through hands-on projects and participating in hackathons.</p>
+          <p>I love creating scalable applications and diving deep into end-to-end development, from idea to deployment.</p>
+          <p>I'm dedicated to learning, exploring new technologies, and contributing to impactful projects. Let's build something amazing together! 🚀</p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
+            </div> -->
+            <div class="box">
+              <p><span> email : </span> ramanan182004@gmail.com</p>
+              <p><span> place : </span> Coimbatore, TamilNadu - 641 032</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/18uwKnDC47TAA162k9409n_ht7OJZ6rKK/view" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+  <div class="container" style="max-width: 1200px; margin: auto;">
+      <div class="row" id="skillsContainer" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+          <!-- Python -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Python</p>
+          </div>
+          <!-- Java -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png" alt="Java Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Java</p>
+          </div>
+          <!-- HTML5 -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML5 Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">HTML5</p>
+          </div>
+          <!-- CSS3 -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3 Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">CSS3</p>
+          </div>
+          <!-- JavaScript -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">JavaScript</p>
+          </div>
+          <!-- Django -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Django</p>
+          </div>
+          <!-- TensorFlow -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">TensorFlow</p>
+          </div>
+          <!-- OpenCV -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/opencv.png" alt="OpenCV Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">OpenCV</p>
+          </div>
+          <!-- Streamlit -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/streamlit.png" alt="Streamlit Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Streamlit</p>
+          </div>
+          <!-- Docker -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Docker</p>
+          </div>
+          <!-- MongoDB -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">MongoDB</p>
+          </div>
+          <!-- Git -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Git</p>
+          </div>
+          <!-- GitHub -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">GitHub</p>
+          </div>
+          <!-- Jenkins -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/jenkins.png" alt="Jenkins Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Jenkins</p>
+          </div>
+          <!-- Netlify -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png" alt="Netlify Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Netlify</p>
+          </div>
+          <!-- Tableau -->
+          <div style="flex: 1 1 calc(20% - 15px); box-sizing: border-box; text-align: center; margin: 5px; min-width: 150px;">
+              <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="Tableau Icon" style="width: 48px; height: 48px; margin-bottom: 10px;">
+              <p style="margin: 0; font-size: 1rem; color: #333;">Tableau</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/educat/college.jpg" alt="">
+        </div>
+        <div class="content">
+        <h3>B.Tech in Artificial Intelligence and Data Science</h3>
+        <p>Karpagam College of Engineering  | KCE</p>
+        <h4>2022-2026 | Pursuing</h4>
+        </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/school.png" alt="">
+      </div>
+      <div class="content">
+      <h3>HSC Computer Science </h3>
+      <p>Ramana Maharishi Loyola Academy metric higher secondary school</p>
+      <h4>2020-2022 | Completed</h4>
+      </div>
+    </div>
+
+</div>
+</section>
+<!-- education section ends -->
+
+
+<!-- work project section starts -->
+<section class="work" id="work1">
+
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+  <div class="box-container">
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/aibasedyogatrainer.png" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>AI-Based Yoga Trainer</h3>
+        </div>
+        <div class="desc">
+          <p>Interactive AI-based trainer to guide users in performing yoga poses accurately with real-time feedback.</p>
+          <div class="btns">
+            <a href="https://github.com/ramanan-techlover/AI-Yoga" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/ramanan-techlover/AI-Yoga" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/languagetranslation.png" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>Language Translation App</h3>
+        </div>
+        <div class="desc">
+          <p>Language translation app leveraging Deep Translator for seamless multilingual communication.</p>
+          <div class="btns">
+            <a href="https://github.com/ramanan-techlover/language_translation_tool" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/ramanan-techlover/language_translation_tool" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/obesityclassifier.png" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>Obesity Classifier</h3>
+        </div>
+        <div class="desc">
+          <p>AI-based classifier for predicting obesity levels based on health and demographic data.</p>
+          <div class="btns">
+            <a href="https://github.com/ramanan-techlover/Obesity_classifier_react_django" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/ramanan-techlover/Obesity_classifier_react_django" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/drone.png" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>Drone-Aid</h3>
+        </div>
+        <div class="desc">
+          <p>Automated drone delivery system for emergencies, including accidents, disasters, and medical needs.</p>
+          <div class="btns">
+            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/your-repo/drone-delivery-system" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/bloggingwebsite.png" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>Blogging Website</h3>
+        </div>
+        <div class="desc">
+          <p>Platform for creating and sharing blog posts, with a user-friendly interface and customizable themes.</p>
+          <div class="btns">
+            <a href="https://ramanan-techlover.github.io/techflash/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/ramanan-techlover/techflash" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/medicoplus.png" alt="" />
+      <div class="content">
+        <div class="tag">
+          <h3>Medico Plus</h3>
+        </div>
+        <div class="desc">
+          <p>Centralized platform for connecting users with doctors.</p>
+          <div class="btns">
+            <a href="https://ramanan-techlover.github.io/medico-plus/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/ramanan-techlover/medico-plus" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="viewall">
+    <a href="./projects/" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+
+</section>
+<!-- work project section ends -->
+
+
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="">
+      </div>
+    <form id="contact-form">
+      
+      <div class="form-group">
+        <div class="field">
+          <input type="text" name="name" placeholder="Name" required>
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Email" required>
+          <i class='fas fa-envelope'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="phone" placeholder="Phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="message">
+        <textarea placeholder="Message" name="message" required></textarea>
+        <i class="fas fa-comment-dots"></i>
+        </div>
+        </div>
+      <div class="button-area">
+        <button type="submit">
+          Submit <i class="fa fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+  </div>
+</section>
+<!-- contact section ends -->
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Ramanan's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+91 87786 75441</p>
+          <p> <i class="fas fa-envelope"></i>ramanan182004@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Coimbatore, TamilNadu - 641 032</p>
+          <div class="share">
+
+              <a href="https://www.linkedin.com/in/ramanan-r-techlover/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/ramanan-techlover" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto:ramanan182004@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="https://www.instagram.com/jigarsable.dev" class="fab fa-instagram" aria-label="Instagram" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/ramanan-r-techlover/"> Ramanan R</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
